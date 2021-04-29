@@ -6,6 +6,7 @@ import Nav from './components/layout/nav/Nav';
 
 import Acceuil from './components/acceuil/Acceuil'
 import Recherche from './components/recherche/Recherche'
+import Articles from "./components/acceuil/Articles"
 
 import React from "react";
 import {
@@ -22,8 +23,8 @@ function App() {
         <Nav />
           <main className="container my-5">
             <Switch>
-              <Route path="/acceuil">
-                <Acceuil />
+              <Route path="/article">
+                <Articles />
               </Route>
               <Route path="/recherche">
                 <Recherche />

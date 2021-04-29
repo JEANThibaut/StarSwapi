@@ -9,7 +9,7 @@ function Nav() {
         <nav className="bg-secondary">
             <ul className="nav">
                 <li className="nav-item">
-                    <Link className="nav-link text-white" to="/acceuil">Acceuil</Link>
+                    <Link className="nav-link text-white" to="/article">Acceuil</Link>
                 </li>
                 <li className="nav-item">
                     <Link className="nav-link text-white" to="/recherche">Recherche</Link>
