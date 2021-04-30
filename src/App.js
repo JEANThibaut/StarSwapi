@@ -6,6 +6,7 @@ import Nav from './components/layout/nav/Nav';
 
 import SearchBar from './components/recherche/input/SearchBar'
 import Categories from "./components/acceuil/Categories"
+import People from "./components/recherche/people/People"
 
 import React from "react";
 import {
@@ -27,6 +28,9 @@ function App() {
               </Route>
               <Route path="/recherche">
                 <SearchBar />
+              </Route>
+              <Route path="/people">
+                <People />
               </Route>
               <Route path="/">
                 <Categories />
