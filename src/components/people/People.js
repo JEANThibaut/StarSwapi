@@ -9,27 +9,29 @@ class People extends React.Component {
             loaded: false,
             error: false,
             data : null,
-            articles: null
+            articles: null,
+            
         }
     }
 
     componentDidMount(){
-        Axios.get("https://swapi.dev/api/people")
+        let url= "https://swapi.dev/api/people/"
+        Axios.get(url)
         .then((response) => {
-           
+            console.log(response.data.next)
             let peoplesArray = response.data.results
-            
-            let articles = peoplesArray.map((people) =>{
+            let peoples = peoplesArray.map((people) =>{
                 return(
                     <List people={people.name}/>
-                   
                 )      
             });
             
             this.setState({
                 loaded: true,
                 data: response.data,
-                articles : articles
+                articles : peoples
+                
+                
             })
         })
 

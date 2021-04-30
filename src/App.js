@@ -6,7 +6,7 @@ import Nav from './components/layout/nav/Nav';
 
 import SearchBar from './components/recherche/input/SearchBar'
 import Categories from "./components/acceuil/Categories"
-import People from "./components/recherche/people/People"
+import People from "./components/people/People"
 
 import React from "react";
 import {

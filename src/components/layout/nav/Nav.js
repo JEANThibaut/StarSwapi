@@ -14,9 +14,9 @@ function Nav() {
                 <li className="nav-item">
                     <Link className="nav-link text-white" to="/recherche">Recherche</Link>
                 </li>
-                <li className="nav-item">
+                {/* <li className="nav-item">
                     <Link className="nav-link text-white" to="/people">Les personnages</Link>
-                </li>
+                </li> */}
             </ul>
         </nav>
     );

@@ -17,15 +17,15 @@ class Categories extends React.Component {
         Axios.get("https://swapi.dev/api/")
         .then((response) => {
             console.log(response)
-            let categories = Object.keys(response.data)
-            let articles = categories.map((article) =>{
+            let categoriesArray = Object.keys(response.data)
+            let categories = categoriesArray.map((article) =>{
                
             return <Carte article={article} />
         });
             this.setState({
                 loaded: true,
                 data: response.data,
-                articles : articles
+                articles : categories
             })
         })
 
