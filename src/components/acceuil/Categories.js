@@ -2,7 +2,7 @@ import React from "react";
 import Axios from "axios";
 import Carte from "./cartes/Carte"
 
-class Articles extends React.Component {
+class Categories extends React.Component {
     constructor(props) {
         super(props);
         this.state={
@@ -15,10 +15,10 @@ class Articles extends React.Component {
 
     componentDidMount(){
         Axios.get("https://swapi.dev/api/")
-        .then((response) => {  
-            let test = (response.data)
-            let test2 = Object.keys(test)
-            let articles = test2.map((article) =>{
+        .then((response) => {
+            console.log(response)
+            let categories = Object.keys(response.data)
+            let articles = categories.map((article) =>{
                
             return <Carte article={article} />
         });
@@ -46,7 +46,7 @@ class Articles extends React.Component {
 
             return(
                 <section>
-                    <h2>Les Personnages</h2>
+                    <h2>Les Catégories</h2>
                     <div className="row">
                         {this.state.articles}
                     </div>
@@ -58,4 +58,4 @@ class Articles extends React.Component {
         );
     }
 }
-export default Articles;
+export default Categories;

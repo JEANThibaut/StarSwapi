@@ -4,9 +4,8 @@ import Header from './components/layout/header/Header';
 import Footer from './components/layout/footer/Footer';
 import Nav from './components/layout/nav/Nav';
 
-import Acceuil from './components/acceuil/Acceuil'
-import Recherche from './components/recherche/Recherche'
-import Articles from "./components/acceuil/Articles"
+import SearchBar from './components/recherche/input/SearchBar'
+import Categories from "./components/acceuil/Categories"
 
 import React from "react";
 import {
@@ -24,13 +23,13 @@ function App() {
           <main className="container my-5">
             <Switch>
               <Route path="/article">
-                <Articles />
+                <Categories />
               </Route>
               <Route path="/recherche">
-                <Recherche />
+                <SearchBar />
               </Route>
               <Route path="/">
-                <Acceuil />
+                <Categories />
               </Route>
               </Switch>
           </main>
